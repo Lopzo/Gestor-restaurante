@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Gestor_de_restaurante.net.Models.Empleado>
+
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear empleado", "crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idEmpleado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idEmpleado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipoDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaIngreso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cargo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "modificar", new { idEmpleado=item.idEmpleado }) |
+                @Html.ActionLink("Details", "ver", new {idEmplado=item.idEmpleado  }) |
+                @Html.ActionLink("Delete", "eliminar", new { idEmpleado=item.idEmpleado  })
+            </td>
+        </tr>
+    }
+
+</table>
