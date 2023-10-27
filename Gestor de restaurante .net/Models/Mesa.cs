@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace Gestor_de_restaurante.net.Models
 {
-    public abstract class Cargo
+    public class Mesa
     {
-        protected abstract void definirCargo(Empleado empleado);
-
+       
     }
 }

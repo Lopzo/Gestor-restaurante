@@ -5,9 +5,9 @@ using System.Web;
 
 namespace Gestor_de_restaurante.net.Models
 {
-    public abstract class Cargo
+    public abstract class TipoContrato
     {
-        protected abstract void definirCargo(Empleado empleado);
+        public abstract void definirTipoContrato();
 
     }
 }

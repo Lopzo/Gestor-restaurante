@@ -7,7 +7,7 @@ using Gestor_de_restaurante.net.Models;
 
 namespace Gestor_de_restaurante.net.Controllers
 {
-    public class empleadoController : Controller
+    public class AdministracionController : Controller
     {
         // GET: Empleado
         public ActionResult index()
@@ -15,7 +15,7 @@ namespace Gestor_de_restaurante.net.Controllers
             var empleados = Session["ListaEmpleados"];
             if (empleados == null) 
             {
-                empleados = new List<Empleado>(); 
+                empleados = new List<Adiministrador>(); 
             }
 
             return View(empleados);
@@ -23,7 +23,7 @@ namespace Gestor_de_restaurante.net.Controllers
 
         public ActionResult ver(int idEmpleado) 
         {
-            Empleado empleado = new Empleado();
+            Adiministrador empleado = new Adiministrador();
             empleado = empleado.GetEmpleado(idEmpleado);
             return View(empleado);
         }
@@ -34,7 +34,7 @@ namespace Gestor_de_restaurante.net.Controllers
         }
 
         [HttpPost]
-        public ActionResult crear(Empleado empleado)
+        public ActionResult crear(Adiministrador empleado)
         {
 
             try
@@ -50,13 +50,13 @@ namespace Gestor_de_restaurante.net.Controllers
 
         public ActionResult modificar(int idEmpleado)
         {
-            Empleado empleado = new Empleado();
+            Adiministrador empleado = new Adiministrador();
             empleado = empleado.GetEmpleado(idEmpleado);
             return View(empleado);
         }
 
         [HttpPost]
-        public ActionResult modificar(Empleado empleado, int idEmpleado) 
+        public ActionResult modificar(Adiministrador empleado, int idEmpleado) 
         {
             try
             {
@@ -72,7 +72,7 @@ namespace Gestor_de_restaurante.net.Controllers
 
         public ActionResult eliminar(int idEmpleado) 
         {
-            Empleado metEmpleado = new Empleado();
+            Adiministrador metEmpleado = new Adiministrador();
             Session["ListaEmpleados"] = metEmpleado.eliminarEmpleado(idEmpleado);
             return RedirectToAction("Index");
         }

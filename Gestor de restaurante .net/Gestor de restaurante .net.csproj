@@ -121,15 +121,22 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\cargoController.cs" />
-    <Compile Include="Controllers\empleadoController.cs" />
+    <Compile Include="Controllers\AdministracionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\tipoDocumentoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cajero.cs" />
+    <Compile Include="Models\Listas\ListaCargos.cs" />
+    <Compile Include="Models\Listas\ListaEmpleados.cs" />
+    <Compile Include="Models\Mesero.cs" />
+    <Compile Include="Models\Mesa.cs" />
+    <Compile Include="Models\CocineroJefe.cs" />
+    <Compile Include="Models\TipoContrato.cs" />
     <Compile Include="Models\Cargo.cs" />
+    <Compile Include="Models\Adiministrador.cs" />
     <Compile Include="Models\Empleado.cs" />
-    <Compile Include="Models\TipoDocumento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
